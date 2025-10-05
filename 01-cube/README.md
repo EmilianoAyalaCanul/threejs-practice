@@ -20,7 +20,6 @@ Here is the result of this exercise:
 
 ## How to Run
 1. Install dependencies:
-
-
-npm install
-npm run dev
+2. npm install
+3. npm run dev
+4. Open the URL shown in the terminal
