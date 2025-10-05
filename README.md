@@ -43,7 +43,6 @@ npm run dev
 ## 📸 Screenshots
 
 Exercise 01: Cube 🟩
-![3D Cube](https://img.shields.io/badge/3D%20Cube-🟦-blue)
 ![Exercise 01: Cube](01-cube/01-cube.png)
 
 ---
