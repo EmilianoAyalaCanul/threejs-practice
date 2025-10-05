@@ -22,12 +22,6 @@ Each folder represents a different exercise, starting from basic geometry to ani
 
 ---
 
-## 📸 Screenshots
-
-*(Coming soon ⏳)*
-
----
-
 ## 🔧 How to Run
 
 1. Clone this repository:
@@ -41,5 +35,15 @@ npm install
 
 4. Run the project:
 npm run dev
+
+5.Open the URL shown in the terminal
+
+---
+
+## 📸 Screenshots
+
+![Exercise 01: Cube](01-cube/01-cube.png)
+
+---
 
 
