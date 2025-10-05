@@ -36,7 +36,7 @@ npm install
 4. Run the project:
 npm run dev
 
-5.Open the URL shown in the terminal
+5. Open the URL shown in the terminal
 
 ---
 
