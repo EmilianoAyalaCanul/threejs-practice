@@ -42,7 +42,7 @@ npm run dev
 
 ## 📸 Screenshots
 
-## Exercise 01: Cube 🟩
+### Exercise 01: Cube 🟩
 ![Exercise 01: Cube](01-cube/01-cube.png)
 
 ---
