@@ -46,7 +46,7 @@ npm run dev
 ![Exercise 01: Cube](01-cube/01-cube.png)
 
 ### Exercise 02: Animation🎥
-![Excercise 02: Animation](t)
+![Excercise 02: Animation](02-Animation/Animation.gif)
 ---
 
 
