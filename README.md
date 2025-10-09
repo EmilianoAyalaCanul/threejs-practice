@@ -8,7 +8,7 @@ Each folder represents a different exercise, starting from basic geometry to ani
 | Folder      | Description |
 |------------|-------------|
 | `01-cube` | Basic cube with camera and renderer 🟦 |
-
+| `02-Animation` | Sequential cube animation with deltaTime and logic control 🎥 |
 *(More exercises will be added over time! 🚀)*
 
 ---
