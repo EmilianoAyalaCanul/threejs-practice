@@ -1,6 +1,7 @@
 # 02-Animation 🎥
 
 ![Three.js Badge](https://img.shields.io/badge/Three.js-v0.152-blue) ![JavaScript Badge](https://img.shields.io/badge/JavaScript-ES6-yellow)
+
 This is my second Three.js practice focused on animation and motion control.
 
 ## About
