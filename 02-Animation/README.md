@@ -10,7 +10,7 @@ I also implemented animations using requestAnimationFrame(), delta time stabiliz
 This project helped me understand how to build logical and sequential animation processes in real time.
 
 Here is the result of this exercise:
-<img src="02-Animation/Animation.gif" alt="Exercise 02: Animation" width="799" height="597">
+<img src="Animation.gif" alt="Exercise 02: Animation" width="799" height="597">
 
 ## Technologies 
 - JavaScript (JS)
