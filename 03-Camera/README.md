@@ -10,7 +10,7 @@ I also used native JavaScript features such as `window.addEventListener('mousemo
 This project helped me understand how to create interactive 3D scenes where the camera smoothly follows user input while looking at objects in the scene.
 
 Here is the result of this exercise:  
-![Cube Preview](Camera.gif)
+![Camera Animation](Camera.gif)
 
 ## Technologies
 - JavaScript (JS)  
