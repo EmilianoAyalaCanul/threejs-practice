@@ -9,6 +9,7 @@ Each folder represents a different exercise, starting from basic geometry to ani
 |------------|-------------|
 | `01-cube` | Basic cube with camera and renderer 🟦 |
 | `02-Animation` | Sequential cube animation with deltaTime and logic control 🎥 |
+| `03-Camera` | Interactive camera control using cursor input, sin & cos math functions 📸 |
 *(More exercises will be added over time! 🚀)*
 
 ---
@@ -47,6 +48,9 @@ npm run dev
 
 ### Exercise 02: Animation 🎥
 <img src="02-Animation/Animation.gif" alt="Exercise 02: Animation" width="799" height="597">
+
+### Exercise 03: Camera 📸
+<img src="03-Camera/Camera.gif" alt="Exercise 02: Animation" width="799" height="597">
 
 ---
 
