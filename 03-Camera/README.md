@@ -6,7 +6,9 @@
 
 ## About
 In this exercise, I learned how to control the camera using the user's cursor, applying basic mathematical functions like `Math.sin` and `Math.cos` to calculate the camera's position around the object.
+
 I also used native JavaScript features such as `window.addEventListener('mousemove', ...)` to track cursor movement in real time, and arrow functions for cleaner and more modern code.
+
 This project helped me understand how to create interactive 3D scenes where the camera smoothly follows user input while looking at objects in the scene.
 
 Here is the result of this exercise:  
