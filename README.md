@@ -55,8 +55,7 @@ npm run dev
 <img src="03-Camera/Camera.gif" alt="Exercise 03: Camera" width="799" height="597">
 
 ### Exercise 04: Fullscreen 🖥️
-<img src="04-Fullscreen/Fullscreen.gif" alt="Exercise 03: Fullscreen" width="799" height="597">
-
+<img src="04-Fullscreen/Fullscreen.gif" alt="Exercise 04: Fullscreen" width="799" height="597">
 ---
 
 
