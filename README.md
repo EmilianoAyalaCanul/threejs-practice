@@ -56,6 +56,7 @@ npm run dev
 
 ### Exercise 04: Fullscreen 🖥️
 <img src="04-Fullscreen/Fullscreen.gif" alt="Exercise 04: Fullscreen" width="799" height="597">
+
 ---
 
 
