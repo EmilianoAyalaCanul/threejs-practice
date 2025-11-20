@@ -13,7 +13,7 @@ I also applied a pixel ratio limit of 2 using renderer.setPixelRatio(Math.min(wi
 This project helped me understand how to make a 3D scene fully responsive and optimized, maintaining a consistent look across different screen sizes and devices.
 
 Here is the result of this exercise:  
-![Fullscreen Animation](Fullscreen.gif)
+![Geometrie Preview](05-Gemetries.png)
 
 ## Technologies
 - JavaScript (JS)  
