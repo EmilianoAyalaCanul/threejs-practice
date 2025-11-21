@@ -23,3 +23,10 @@ The **sine function (sin)** represents the vertical position of a point on a uni
 \]
 
 - In our project, the sine function helps calculate the **vertical position (z-axis)** of the orbiting point along a circular path. 🪐🔄
+
+This means the point never goes above 1 or below -1 on the vertical axis. ✅
+
+- The sine function can also be approximated using the **Taylor series** around 0:
+
+
+- In our project, the sine function helps calculate the **vertical position (z-axis)** of the orbiting point along a circular path. 🪐🔄
