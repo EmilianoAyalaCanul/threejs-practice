@@ -8,10 +8,12 @@ An **orbit** is the curved path of an object around a point in space, usually ar
 
 The **sine function (sin)** represents the vertical position of a point on a unit circle corresponding to a given angle.  
 
-- The sine value is always **between -1 and 1**:  
+- The sine value is always **between -1 and 1**:
+  $$
   \[
   | \sin(x) | \leq 1
-  \]  
+  \]
+  $$
   This means the point never goes above 1 or below -1 on the vertical axis. ✅
 
 - The sine function can also be approximated using the **Taylor series** around 0:  
