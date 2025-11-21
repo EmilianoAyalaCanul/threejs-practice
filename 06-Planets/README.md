@@ -16,3 +16,16 @@ The **sine function (sin)** represents the vertical position of a point on a uni
 $sin(x) \approx x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!}$
 
 - In our project, the sine function helps calculate the **vertical position (z-axis)** of the orbiting point along a circular path. 🪐🔄
+
+## Cosine Function 🌞📐
+
+The **cosine function (cos)** represents the horizontal position of a point on a unit circle corresponding to a given angle.  
+
+- The cosine value is always **between -1 and 1**:  
+  $|cos(x)| <= 1$  
+  This means the point never goes above 1 or below -1 on the horizontal axis. ✅
+
+- The cosine function can also be approximated using the **Taylor series** around 0:  
+$cos(x) \approx 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!}$
+
+- In our project, the cosine function helps calculate the **horizontal position (x-axis)** of the orbiting point along a circular path. 🌌🔄
