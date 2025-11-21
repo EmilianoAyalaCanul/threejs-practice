@@ -50,4 +50,4 @@ Because of the properties of sine and cosine, **no matter how large the numbers 
 
 Here is an example of the orbital plane with points calculated along the circle:  
 
-![Orbital Plane](06-Planets/img/Plano_Orbital.png)  
+![Orbital Plane](img/Plano_Orbital.png)  
