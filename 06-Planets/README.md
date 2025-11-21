@@ -32,6 +32,8 @@ $cos(x) \approx 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!}$
 - 
 ## Orbital Path Visualization 🌌🪐
 
+![Orbital Plane](img/Plano_Orbital.png)  
+
 To create the orbital path, we calculate points along a circle using a finite range of angles.  
 By incrementing the angle from `0` to `2π`, we can generate a **complete orbit** around the central point.  
 
@@ -47,7 +49,3 @@ Each point is calculated using the formula:
 
 The angle `a` increases incrementally to create a smooth circular path. ✅  
 Because of the properties of sine and cosine, **no matter how large the numbers are**, the absolute values of `sin(a)` and `cos(a)` **never exceed 1 or -1**.  
-
-Here is an example of the orbital plane with points calculated along the circle:  
-
-![Orbital Plane](img/Plano_Orbital.png)  
