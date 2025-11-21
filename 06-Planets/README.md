@@ -29,3 +29,25 @@ The **cosine function (cos)** represents the horizontal position of a point on a
 $cos(x) \approx 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!}$
 
 - In our project, the cosine function helps calculate the **horizontal position (x-axis)** of the orbiting point along a circular path. 🌌🔄
+- 
+## Orbital Path Visualization 🌌🪐
+
+To create the orbital path, we calculate points along a circle using a finite range of angles.  
+By incrementing the angle from `0` to `2π`, we can generate a **complete orbit** around the central point.  
+
+Each point is calculated using the formula:  
+
+`P = (x, z) = (r * cos(a), r * sin(a))`  
+
+- Here:  
+  - `r` is the radius of the orbit 🔵  
+  - `a` is the current angle in radians 📐  
+  - `x` represents the horizontal position (cosine) 🌞  
+  - `z` represents the vertical position (sine) 🌊  
+
+The angle `a` increases incrementally to create a smooth circular path. ✅  
+Because of the properties of sine and cosine, **no matter how large the numbers are**, the absolute values of `sin(a)` and `cos(a)` **never exceed 1 or -1**.  
+
+Here is an example of the orbital plane with points calculated along the circle:  
+
+![Orbital Plane](06-Planets/img/Plano_Orbital.png)  
