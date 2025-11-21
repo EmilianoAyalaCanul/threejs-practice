@@ -1,8 +1,5 @@
+# Theoretical Concepts 📚✨
 
-
-# 🚀 Simple Planets – Solar System Mini Project
-
-## 📌 Project Status: **In Development**
-
-This project is currently under active development 🛠️  
-Features, structure, and documentation may change as the project evolves.
+## Orbit 🌌🪐
+For this project, we will focus on recreating simple orbits.  
+An **orbit** is the curved path of an object around a point in space, usually around a larger body due to gravitational forces. In our project, it represents the path that planets or other objects follow around a central point, like the Sun.
