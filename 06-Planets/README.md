@@ -49,4 +49,4 @@ Each point is calculated using the formula:
 
 The angle `a` increases incrementally to create a smooth circular path. ✅  
 Because of the properties of sine and cosine, **no matter how large the numbers are**, the absolute values of `sin(a)` and `cos(a)` **never exceed 1 or -1**.  
-.
+..
