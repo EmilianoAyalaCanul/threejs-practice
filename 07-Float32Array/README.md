@@ -20,7 +20,7 @@ Instead of using high-level abstractions, the cube is defined face by face, usin
 Even though many vertices share the same spatial coordinates, they are duplicated per face, which reflects how low-level geometry works in real-time graphics (and prepares the ground for normals, lighting, and indexed geometry).
 
 Here is the result of this exercise:  
-![Geometrie Preview](05-Geometries.png)
+![Geometrie Preview](/Img/Cube_Coordinadas.png)
 
 ## Technologies
 - JavaScript (JS)  
