@@ -1,9 +1,4 @@
-# 07-Float32Array 
-
-┌──────┬──────┬──────┬──────┬──────┬──────┐
-│ 1.0  │ 1.0  │ 1.0  │ 1.0  │ 2.0  │ 1.0  │
-└──────┴──────┴──────┴──────┴──────┴──────┘
-
+# 07-Float32Array [ X ] [ X ] [ ? ] [ X ] [ X ]
 
 ![Three.js Badge](https://img.shields.io/badge/Three.js-v0.152-blue)
 ![JavaScript Badge](https://img.shields.io/badge/JavaScript-ES6-yellow)
