@@ -19,10 +19,21 @@ Instead of using high-level abstractions, the cube is defined face by face, usin
 
 Even though many vertices share the same spatial coordinates, they are duplicated per face, which reflects how low-level geometry works in real-time graphics (and prepares the ground for normals, lighting, and indexed geometry).
 
-Here is the result of this exercise:  
-![Geometrie Preview](/Img/Cube_Coordinadas.png)
+##🎯 Purpose of This Project
 
-## Technologies
+The main goal of this project is learning and understanding:
+
+- How 3D objects are built from vertices and triangles.
+- How coordinate systems work in Three.js.
+- Why vertices are often duplicated across faces.
+- How low-level geometry definition differs from using built-in primitives.
+
+This approach helps build a solid mental model of how 3D engines and the GPU handle geometry internally.
+
+Here is the result of this exercise:  
+![Geometrie Preview](07-Float32Array/Img/Cube_Coordenadas.png)
+
+## Technologies 🚀
 - JavaScript (JS)  
 - Three.js  
 - Vite  
