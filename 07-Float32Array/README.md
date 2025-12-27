@@ -31,7 +31,7 @@ The main goal of this project is learning and understanding:
 This approach helps build a solid mental model of how 3D engines and the GPU handle geometry internally.
 
 Here is the result of this exercise:  
-![Geometrie Preview](Img/Cube_Coordenadas.png)
+![Geometrie Preview](Img/Cube_Result.png)
 
 ## Technologies 🚀
 - JavaScript (JS)  
