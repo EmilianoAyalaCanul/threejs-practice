@@ -8,7 +8,7 @@ This project demonstrates how to manually construct a 3D cube using only vertex 
 
 Instead of using high-level abstractions, the cube is defined face by face, using triangles composed of explicit vertex positions, stored in a Float32Array and passed to a BufferGeometry.
 
-##🧠 Core Concept
+## 🧠 Core Concept
 
 - A cube is built from 6 faces.
 - Each face is composed of 2 triangles.
@@ -17,7 +17,7 @@ Instead of using high-level abstractions, the cube is defined face by face, usin
 
 Even though many vertices share the same spatial coordinates, they are duplicated per face, which reflects how low-level geometry works in real-time graphics (and prepares the ground for normals, lighting, and indexed geometry).
 
-##🎯 Purpose of This Project
+## 🎯 Purpose of This Project
 
 The main goal of this project is learning and understanding:
 
@@ -29,7 +29,7 @@ The main goal of this project is learning and understanding:
 This approach helps build a solid mental model of how 3D engines and the GPU handle geometry internally.
 
 Here is the result of this exercise:  
-![Geometrie Preview](07-Float32Array/Img/Cube_Coordenadas.png)
+![Geometrie Preview](Img/Cube_Coordenadas.png)
 
 ## Technologies 🚀
 - JavaScript (JS)  
