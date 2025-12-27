@@ -15,6 +15,8 @@ Instead of using high-level abstractions, the cube is defined face by face, usin
 - Each triangle is defined by 3 vertices.
 - Total: 12 triangles → 36 vertex positions.
 
+![Coordenadas del cubo](Img/Cube_Coordenadas.png)
+
 Even though many vertices share the same spatial coordinates, they are duplicated per face, which reflects how low-level geometry works in real-time graphics (and prepares the ground for normals, lighting, and indexed geometry).
 
 ## 🎯 Purpose of This Project
