@@ -12,6 +12,7 @@ Each folder represents a different exercise, starting from basic geometry to ani
 | `03-Camera` | Interactive camera control using cursor input, sin & cos math functions 📸 |
 | `04-Fullscreen` | Responsive fullscreen mode with resize handling and pixel ratio limit 🖥️ |
 | `05-Geometries` | Procedural geometry built from raw Float32Array vertex buffers ⬡ |
+| `07-Float32Array` | Cube geometry built from raw Float32Array vertex coordinates ⬡ |
 
 *(More exercises will be added over time! 🚀)*
 
@@ -61,6 +62,9 @@ npm run dev
 
 ### Exercise 05: Geometries ⬡
 <img src="05-Geometries/05-Geometries.png" alt="Exercise 04: Fullscreen" width="799" height="597">
+
+### Exercise 07: 07-Float32Array ⬡
+<img src="07-Geometries/Img/Cube_Result.png" alt="Exercise 04: Fullscreen" width="799" height="597">
 
 ---
 
