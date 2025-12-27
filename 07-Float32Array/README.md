@@ -4,8 +4,6 @@
 ![JavaScript Badge](https://img.shields.io/badge/JavaScript-ES6-yellow)
 
 ## 📦 Building a Cube Using Raw Vertex Coordinates (Three.js)
-
-## About
 This project demonstrates how to manually construct a 3D cube using only vertex coordinates, without relying on BoxGeometry or any predefined geometries from Three.js.
 
 Instead of using high-level abstractions, the cube is defined face by face, using triangles composed of explicit vertex positions, stored in a Float32Array and passed to a BufferGeometry.
