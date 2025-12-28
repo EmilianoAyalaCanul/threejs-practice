@@ -1,12 +1,10 @@
 # 09 Debug User Interface 🎛
 
+
 ![Three.js Badge](https://img.shields.io/badge/Three.js-v0.152-blue)
-
 ![JavaScript Badge](https://img.shields.io/badge/JavaScript-ES6-yellow)
-
 ![lil-gui Badge](https://img.shields.io/badge/lil--gui-v0.18-green)
 
----
 
 ## ✨ About
 This project is an **interactive 3D scene** created with Three.js and **lil-gui**.  
