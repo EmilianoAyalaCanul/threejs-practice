@@ -44,7 +44,7 @@ The project demonstrates:
 
 
 Here is the result of this exercise:  
-![Geometrie Preview](05-Geometries.png)
+![Geometrie Preview](img/09-practica.gif)
 
 ## Technologies
 - JavaScript (JS)  
