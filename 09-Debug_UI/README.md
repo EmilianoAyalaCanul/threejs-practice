@@ -18,21 +18,8 @@ The project demonstrates:
 
 - Control of object visibility and transformations using **lil-gui**  
 - Autonomous animations using `elapsedTime` and delta timing  
-- A structured, maintainable scene with multiple interactive objects  
+- A structured, maintainable scene with multiple interactive objects
 
-Here’s a preview of the scene:  
-![Scene Preview](preview.png)  <!-- Replace with your actual screenshot -->
-
----
-
-## 🛠 Technologies
-- **JavaScript (ES6)**  
-- **Three.js**  
-- **lil-gui**  
-- **Vite**  
-- **VS Code**
-
----
 
 ## 🎮 Features
 - 🌎 **Earth Object**
@@ -54,3 +41,19 @@ Here’s a preview of the scene:
 - 📐 **Orbit Controls** – navigate scene with mouse  
 - 🕹 **Keyboard Shortcuts**
   - `Delete` key toggles GUI visibility
+
+
+Here is the result of this exercise:  
+![Geometrie Preview](05-Geometries.png)
+
+## Technologies
+- JavaScript (JS)  
+- Three.js  
+- Vite  
+- VS Code  
+
+## How to Run
+1. Install dependencies:
+2. npm install
+3. npm run dev
+4. Open the URL shown in the terminal
