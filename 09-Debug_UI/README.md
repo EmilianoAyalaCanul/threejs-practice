@@ -43,6 +43,7 @@ The project demonstrates:
   - `Delete` key toggles GUI visibility
 
 
+
 Here is the result of this exercise:  
 ![Geometrie Preview](img/09-practica.gif)
 
