@@ -1,4 +1,4 @@
-#09 Debug User Interface 🎛
+# 09 Debug User Interface 🎛
 
 ![Three.js Badge](https://img.shields.io/badge/Three.js-v0.152-blue)
 ![JavaScript Badge](https://img.shields.io/badge/JavaScript-ES6-yellow)
