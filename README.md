@@ -68,7 +68,7 @@ npm run dev
 <img src="07-Float32Array/Img/Cube_Result.png" alt="Exercise 04: Fullscreen" width="799" height="597">
 
 ### Exercise 09 Debug UI 🎛
-<img src="09-practica/img/09-practica.gift" alt="Exercise 04: Fullscreen" width="799" height="597">
+<img src="09-Debug_UI/img/09-practica.gif" alt="Exercise 04: Fullscreen" width="799" height="597">
 
 ---
 
