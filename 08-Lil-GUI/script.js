@@ -59,7 +59,7 @@ sphere_gui_positions
     .min(-Math.PI)
     .max(Math.PI)
     .step(0.01)
-    .name('Movement Along The Y-Axis')
+    .name('Movement Along The Z-Axis')
     .listen()
 
 //nested folder rotations
