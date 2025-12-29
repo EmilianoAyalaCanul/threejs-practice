@@ -1,6 +1,5 @@
 import * as THREE from 'three'
 import GUI from 'lil-gui'
-import { OrbitControls } from 'three/examples/jsm/Addons.js'
 
 //canvas
 const canvas = document.querySelector('canvas.webgl')
