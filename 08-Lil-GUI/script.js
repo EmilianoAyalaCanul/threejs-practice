@@ -35,8 +35,9 @@ const gui = new GUI({
 const object_gui={}
 
 const sphere_gui = gui.addFolder('Moon GUI')
-//nested folder
+//nested folder positions
 const sphere_gui_positions = sphere_gui.addFolder('Movements On The Axes')
+sphere_gui_positions.close()
 sphere_gui_positions
     .add(sphere_item.position,'x')
     .min(-Math.PI)
@@ -55,6 +56,38 @@ sphere_gui_positions
     .max(Math.PI)
     .step(0.01)
     .name('Movement Along The Z-Axis')
+
+//nested folder rotations
+const sphere_gui_rotations = sphere_gui.addFolder('Rotation On the Axes')
+sphere_gui_rotations.close()
+sphere_gui_rotations
+    .add(sphere_item.rotation,'x')
+    .min(-Math.PI)
+    .max(Math.PI)
+    .step(0.01)
+    .name('Rotation On X-Axis')
+sphere_gui_rotations
+    .add(sphere_item.rotation,'y')
+    .min(-Math.PI)
+    .max(Math.PI)
+    .step(0.01)
+    .name('Rotation on Y-Axis')
+sphere_gui_rotations
+    .add(sphere_item.rotation,'z')
+    .min(-Math.PI)
+    .max(Math.PI)
+    .step(0.01)
+    .name('Rotation on Z-Axis')
+
+object_gui.resetParameters = () =>{
+    sphere_item.position.set(0,0,0)
+    sphere_item.rotation.set(0,0,0)
+}
+
+sphere_gui.add(object_gui,'resetParameters')
+    .name('Reset Parameters')
+
+
 
 //camera
 const camera = new THREE.PerspectiveCamera(75,sizes.width/sizes.height,0.1,200)
