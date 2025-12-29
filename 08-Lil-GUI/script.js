@@ -40,6 +40,21 @@ const sphere_gui = gui.addFolder('Moon GUI')
 const camera = new THREE.PerspectiveCamera(75,sizes.width/sizes.height,0.1,200)
 camera.position.z = 5
 
+//responsive viewport
+window.addEventListener('resize', ()=>{
+    //update sizes
+    sizes.width = window.innerWidth
+    sizes.height = window.innerHeight
+
+    //update camera aspect
+    camera.aspect = sizes.width / sizes.height
+    camera.updateProjectionMatrix()
+
+    //update render
+    renderer.setSize(sizes.width,sizes.height)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio,2))
+})
+
 //scene
 const scene = new THREE.Scene()
 scene
