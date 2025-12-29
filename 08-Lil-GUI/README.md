@@ -1,7 +1,9 @@
 # 08-LIL-GUI
 
-![Three.js Badge](https://img.shields.io/badge/Three.js-v0.152-blue)
+![Three.js Badge](https://img.shields.io/badge/Three.js-0.182.0-blue)
 ![JavaScript Badge](https://img.shields.io/badge/JavaScript-ES6-yellow)
+![Git Hub Badge](https://img.shields.io/badge/Git_Hub-Emiliano_Ayala_Canul-Green)
+![Lil Gui Badge](https://img.shields.io/badge/Lil_gui-0.21.0-purple)
 
 ## About
 
