@@ -27,14 +27,34 @@ const sphere_item = new THREE.Mesh(sphere_geometry,sphere_material)
 
 //Gui
 const gui = new GUI({
-    title: 'Debug Gui'
+    title: 'Debug Gui',
+    width: 340
 })
 
 //gui object
 const object_gui={}
 
 const sphere_gui = gui.addFolder('Moon GUI')
-
+//nested folder
+const sphere_gui_positions = sphere_gui.addFolder('Movements On The Axes')
+sphere_gui_positions
+    .add(sphere_item.position,'x')
+    .min(-Math.PI)
+    .max(Math.PI)
+    .step(0.01)
+    .name('Movement Along The X-Axis')
+sphere_gui_positions
+    .add(sphere_item.position,'y')
+    .min(-Math.PI)
+    .max(Math.PI)
+    .step(0.01)
+    .name('Movement Along The Y-Axis')
+sphere_gui_positions
+    .add(sphere_item.position,'z')
+    .min(-Math.PI)
+    .max(Math.PI)
+    .step(0.01)
+    .name('Movement Along The Z-Axis')
 
 //camera
 const camera = new THREE.PerspectiveCamera(75,sizes.width/sizes.height,0.1,200)
