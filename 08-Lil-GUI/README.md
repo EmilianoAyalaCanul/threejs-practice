@@ -16,8 +16,8 @@ A key learning outcome was understanding how to properly update the GUI display 
 Overall, this practice helped me understand the relationship between state management, render loops, and graphical user interfaces in Three.js. It also reinforced the importance of separating logic, state, and rendering to build scalable and maintainable interactive 3D applications.
 
 Here is the result of this exercise:  
-![LIL-GUI](img/resultado.gif)
-
+![lil gui](img/resultado.gif)
+![Geometrie Preview](img/09-practica.gif)
 ## Technologies
 - JavaScript (JS)  
 - Three.js  
