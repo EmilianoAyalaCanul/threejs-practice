@@ -17,7 +17,7 @@ Overall, this practice helped me understand the relationship between state manag
 
 Here is the result of this exercise:  
 ![lil gui](img/resultado.gif)
-![Geometrie Preview](img/09-practica.gif)
+
 ## Technologies
 - JavaScript (JS)  
 - Three.js  
