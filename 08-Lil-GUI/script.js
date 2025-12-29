@@ -51,8 +51,14 @@ scene
 const renderer = new THREE.WebGLRenderer({canvas:canvas})
 renderer.setSize(sizes.width,sizes.height)
 
+//timer
+let time = Date.now()
 
 const loop = () =>{
+    //timer
+    const currentTime = Date.now()
+    const deltaTime = currentTime - time
+    time = currentTime
 
     //render
     renderer.render(scene,camera)
