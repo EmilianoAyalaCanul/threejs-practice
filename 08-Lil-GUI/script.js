@@ -38,50 +38,69 @@ const sphere_gui = gui.addFolder('Moon GUI')
 //nested folder positions
 const sphere_gui_positions = sphere_gui.addFolder('Movements On The Axes')
 sphere_gui_positions.close()
+object_gui.sphere_position_x = 0 //create variable position X
 sphere_gui_positions
-    .add(sphere_item.position,'x')
+    .add(object_gui,'sphere_position_x')
     .min(-Math.PI)
     .max(Math.PI)
     .step(0.01)
     .name('Movement Along The X-Axis')
+    .listen()  
+object_gui.sphere_position_y = 0 //create variable position Y
 sphere_gui_positions
-    .add(sphere_item.position,'y')
+    .add(object_gui,'sphere_position_y')
     .min(-Math.PI)
     .max(Math.PI)
     .step(0.01)
     .name('Movement Along The Y-Axis')
+    .listen()  
+object_gui.sphere_position_z = 0 //create variable position Z
 sphere_gui_positions
-    .add(sphere_item.position,'z')
+    .add(object_gui,'sphere_position_z')
     .min(-Math.PI)
     .max(Math.PI)
     .step(0.01)
-    .name('Movement Along The Z-Axis')
+    .name('Movement Along The Y-Axis')
+    .listen()
 
 //nested folder rotations
 const sphere_gui_rotations = sphere_gui.addFolder('Rotation On the Axes')
 sphere_gui_rotations.close()
+
+object_gui.sphere_rotation_x = 0 //create variable position X
 sphere_gui_rotations
-    .add(sphere_item.rotation,'x')
+    .add(object_gui,'sphere_rotation_x')
     .min(-Math.PI)
     .max(Math.PI)
     .step(0.01)
     .name('Rotation On X-Axis')
+    .listen()
+object_gui.sphere_rotation_y = 0 //create variable position Y
 sphere_gui_rotations
-    .add(sphere_item.rotation,'y')
+    .add(object_gui,'sphere_rotation_y')
     .min(-Math.PI)
     .max(Math.PI)
     .step(0.01)
-    .name('Rotation on Y-Axis')
+    .name('Rotation On X-Axis')
+    .listen()
+object_gui.sphere_rotation_z = 0 //create variable position Z
 sphere_gui_rotations
-    .add(sphere_item.rotation,'z')
+    .add(object_gui,'sphere_rotation_z')
     .min(-Math.PI)
     .max(Math.PI)
     .step(0.01)
-    .name('Rotation on Z-Axis')
+    .name('Rotation On X-Axis')
+    .listen()
 
+//reset parameters
 object_gui.resetParameters = () =>{
-    sphere_item.position.set(0,0,0)
-    sphere_item.rotation.set(0,0,0)
+    object_gui.sphere_position_x = 0
+    object_gui.sphere_position_y = 0
+    object_gui.sphere_position_z = 0
+    
+    object_gui.sphere_rotation_x = 0
+    object_gui.sphere_rotation_y = 0
+    object_gui.sphere_rotation_z = 0
 }
 
 sphere_gui.add(object_gui,'resetParameters')
@@ -127,6 +146,10 @@ const loop = () =>{
     const currentTime = Date.now()
     const deltaTime = currentTime - time
     time = currentTime
+
+    //actualizacion de posiciones gui
+    sphere_item.position.set (object_gui.sphere_position_x, object_gui.sphere_position_y, object_gui.sphere_position_z)
+    sphere_item.rotation.set(object_gui.sphere_rotation_x,object_gui.sphere_rotation_y,object_gui.sphere_rotation_z)
 
     //render
     renderer.render(scene,camera)
