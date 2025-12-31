@@ -1,4 +1,5 @@
 # Theoretical Concepts 📚✨
+![Static Badge](https://img.shields.io/badge/Emiliano%20Ayala%20Canul-Git%20Hub-green)
 
 ## Orbit 🌌🪐
 For this project, we will focus on recreating simple orbits.  
