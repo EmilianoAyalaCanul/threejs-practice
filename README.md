@@ -74,6 +74,7 @@ npm run dev
 ### Exercise 09 Debug UI 🎛
 <img src="09-Debug_UI/img/09-practica.gif" alt="Exercise 04: Fullscreen" width="799" height="597">
 
+.
 ---
 
 
