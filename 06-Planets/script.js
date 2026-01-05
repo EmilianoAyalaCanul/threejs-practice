@@ -22,7 +22,19 @@ const gui = new GUI({
     title: 'Controls',
     width: 340
 })
-const debug_object = {}
+const debug_object = {
+    earth_value: 0,
+    earth_increment: 0.01,
+    earth_distance: 3,
+
+}
+
+//textures
+const textureLoader = new THREE.TextureLoader()
+
+//earth group textures
+const earth_planet_texture = textureLoader.load('/textures/earthmap.jpg')
+earth_planet_texture.colorSpace = THREE.SRGBColorSpace
 
 /*Groups Geometries*/
 //planet
@@ -31,18 +43,17 @@ const planet = new THREE.Mesh(
     new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: true})
 );
 
+//earth group
+const earth_group = new THREE.Group()
+const earth_planet_geometry = new THREE.SphereGeometry(1,32,16)
+const earth_planet_material = new THREE.MeshBasicMaterial({map: earth_planet_texture})
+const earth_planet = new THREE.Mesh(earth_planet_geometry,earth_planet_material)
+earth_group.add(earth_planet)
+
 //translate parameters
 debug_object.traslateValue = true;
 debug_object.traslatePosition = 0;
-//transalate parameters
-const traslation = (value) => {
-    if(value && (debug_object.traslatePosition <= 2 * Math.PI)){
-        debug_object.traslatePosition += 0.01
-    }
-    else{
-        debug_object.traslatePosition = 0;
-    }
-}
+
 
 //camera
 const camera = new THREE.PerspectiveCamera(75,sizes.width/sizes.height,0.01,200);
@@ -67,6 +78,7 @@ window.addEventListener('resize', ()=>{
 scene.add(axesHelper);
 scene.add(planet);
 scene.add(camera);
+scene.add(earth_group)
 
 //orbit controls
 const orbitControls = new OrbitControls(camera,canvas);
@@ -91,11 +103,29 @@ inside tick method
     planet.position.x = Math.cos(elapsedtime) * 3;
     planet.position.z = Math.sin(elapsedtime) * 3;
 
+
+Traslation method 
+    if(debug_object.traslateValue && (debug_object.earth_value <= 2 * Math.PI)){
+        debug_object.earth_value += debug_object.earth_increment
+        console.log(debug_object.earth_value)
+    }
+    else{
+        debug_object.earth_value = 0;
+    }
     -rotation with the new method
     planet.position.x = Math.cos(debug_object.traslatePosition) * 3
     planet.position.z = Math.sin(debug_object.traslatePosition) * 3
 
 */
+
+//translation method
+const orbita = (trigger, debug, valueKey, incrementKey) => {
+    if (trigger && debug[valueKey] <= 2 * Math.PI) {
+        debug[valueKey] += debug[incrementKey]
+    } else {
+        debug[valueKey] = 0
+    }
+}
 
 //loop
 const tick = () =>{
@@ -104,10 +134,13 @@ const tick = () =>{
     let deltaTime = currentTime - time;
     time = currentTime;
 
-    //The traslation method to initialize it is only called once.
-    traslation(debug_object.traslateValue)
-     
+    //translation method
+    orbita(debug_object.traslateValue,debug_object,'earth_value','earth_increment')
 
+    //earth_parameters_translation
+    earth_planet.position.x = Math.cos(debug_object.earth_value) * debug_object.earth_distance
+    earth_planet.position.z = Math.sin(debug_object.earth_value) * debug_object.earth_distance
+     
     //rotation
     planet.rotation.y += 0.001 * deltaTime;
 
