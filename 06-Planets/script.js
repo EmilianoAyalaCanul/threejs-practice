@@ -37,11 +37,6 @@ const earth_planet_texture = textureLoader.load('/textures/earthmap.jpg')
 earth_planet_texture.colorSpace = THREE.SRGBColorSpace
 
 /*Groups Geometries*/
-//planet
-const planet = new THREE.Mesh(
-    new THREE.SphereGeometry(1,32,16),
-    new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: true})
-);
 
 //earth group
 const earth_group = new THREE.Group()
@@ -52,8 +47,31 @@ earth_group.add(earth_planet)
 
 //translate parameters
 debug_object.traslateValue = true;
-debug_object.traslatePosition = 0;
 
+//debug gui folders
+const gui_planets = gui.addFolder('Planets')
+
+//debug gui planets earth group
+const gui_planets_earth_group = gui_planets.addFolder('Earth Group')
+//debug gui planets earth planet
+const gui_planets_earth_group_earth = gui_planets_earth_group.addFolder('Earth')
+gui_planets_earth_group_earth
+    .add(debug_object,'earth_increment')
+    .name('Orbital Speed')
+    .min(-0.3)
+    .max(0.3)
+    .step(0.01)
+gui_planets_earth_group_earth
+    .add(debug_object,'earth_distance')
+    .name('Orbital Radious')
+    .min(0)
+    .max(10)
+    .step(1)
+
+//trigger option
+gui_planets
+    .add(debug_object,'traslateValue')
+    .name('Translation Toggle')
 
 //camera
 const camera = new THREE.PerspectiveCamera(75,sizes.width/sizes.height,0.01,200);
@@ -76,7 +94,6 @@ window.addEventListener('resize', ()=>{
 
 //add scene
 scene.add(axesHelper);
-scene.add(planet);
 scene.add(camera);
 scene.add(earth_group)
 
@@ -140,9 +157,6 @@ const tick = () =>{
     //earth_parameters_translation
     earth_planet.position.x = Math.cos(debug_object.earth_value) * debug_object.earth_distance
     earth_planet.position.z = Math.sin(debug_object.earth_value) * debug_object.earth_distance
-     
-    //rotation
-    planet.rotation.y += 0.001 * deltaTime;
 
     orbitControls.update(); //update orbit controls
     renderer.render(scene,camera); //render
