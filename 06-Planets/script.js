@@ -6,6 +6,7 @@ const axesHelper = new THREE.AxesHelper(2); //axes Helper
 const cl = (input) =>{
     console.log(input);
 };
+
 //sizes viewport
 let sizes = {
     width: window.innerWidth,
@@ -26,6 +27,21 @@ const planet = new THREE.Mesh(
 const camera = new THREE.PerspectiveCamera(75,sizes.width/sizes.height,0.01,200);
 camera.position.z = 5; //camera inital position
 
+//responsive viewport
+window.addEventListener('resize', ()=>{
+    //update sizes
+    sizes.width = window.innerWidth
+    sizes.height = window.innerHeight
+
+    //update camera aspect
+    camera.aspect = sizes.width / sizes.height
+    camera.updateProjectionMatrix()
+
+    //update render
+    renderer.setSize(sizes.width,sizes.height)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio,2))
+})
+
 //add scene
 scene.add(axesHelper);
 scene.add(planet);
@@ -41,8 +57,20 @@ renderer.setSize(sizes.width,sizes.height);
 //timer
 let time = Date.now()
 
-//orbital Rotation Count
-let elapsedtime = 0;
+/*
+out tick method
+    -orbital Rotation Count simple
+    let elapsedtime = 0;
+
+inside tick method
+    -Orbital Count
+    elapsedtime += 0.01;
+
+    -orbital behavior
+    planet.position.x = Math.cos(elapsedtime) * 3;
+    planet.position.z = Math.sin(elapsedtime) * 3;
+
+*/
 
 //loop
 const tick = () =>{
@@ -51,16 +79,10 @@ const tick = () =>{
     let deltaTime = currentTime - time;
     time = currentTime;
 
-    //Orbital Count
-    elapsedtime += 0.01;
-
+    
     //rotation
     planet.rotation.y += 0.001 * deltaTime;
 
-    /*orbital behavior
-    //planet.position.x = Math.cos(elapsedtime) * 3;
-    //planet.position.z = Math.sin(elapsedtime) * 3;
-    */
     orbitControls.update(); //update orbit controls
     renderer.render(scene,camera); //render
     requestAnimationFrame(tick); //call loop
