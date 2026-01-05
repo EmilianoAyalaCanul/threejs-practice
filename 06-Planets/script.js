@@ -33,6 +33,16 @@ const planet = new THREE.Mesh(
 
 //translate parameters
 debug_object.traslateValue = true;
+debug_object.traslatePosition = 0;
+//transalate parameters
+const traslation = (value) => {
+    if(value && (debug_object.traslatePosition <= 2 * Math.PI)){
+        debug_object.traslatePosition += 0.01
+    }
+    else{
+        debug_object.traslatePosition = 0;
+    }
+}
 
 //camera
 const camera = new THREE.PerspectiveCamera(75,sizes.width/sizes.height,0.01,200);
@@ -81,6 +91,10 @@ inside tick method
     planet.position.x = Math.cos(elapsedtime) * 3;
     planet.position.z = Math.sin(elapsedtime) * 3;
 
+    -rotation with the new method
+    planet.position.x = Math.cos(debug_object.traslatePosition) * 3
+    planet.position.z = Math.sin(debug_object.traslatePosition) * 3
+
 */
 
 //loop
@@ -90,7 +104,10 @@ const tick = () =>{
     let deltaTime = currentTime - time;
     time = currentTime;
 
-    
+    //The traslation method to initialize it is only called once.
+    traslation(debug_object.traslateValue)
+     
+
     //rotation
     planet.rotation.y += 0.001 * deltaTime;
 
