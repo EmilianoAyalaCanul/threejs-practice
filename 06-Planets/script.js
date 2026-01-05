@@ -23,10 +23,11 @@ const gui = new GUI({
     width: 340
 })
 const debug_object = {
+    //earth group
+    //earth value
     earth_value: 0,
     earth_increment: 0.01,
     earth_distance: 3,
-
 }
 
 //textures
@@ -36,7 +37,15 @@ const textureLoader = new THREE.TextureLoader()
 const earth_planet_texture = textureLoader.load('/textures/earthmap.jpg')
 earth_planet_texture.colorSpace = THREE.SRGBColorSpace
 
+//moon group textures
+const moon_planet_texture = textureLoader.load('/textures/MoonMap.jpg')
+moon_planet_texture.colorSpace = THREE.SRGBColorSpace
+
 /*Groups Geometries*/
+//moon group
+const moon_planet_geometry = new THREE.SphereGeometry(0.2,32,16)
+const moon_planet_material = new THREE.MeshBasicMaterial({map: moon_planet_texture})
+const moon_planet = new THREE.Mesh(moon_planet_geometry,moon_planet_material)
 
 //earth group
 const earth_group = new THREE.Group()
@@ -44,6 +53,7 @@ const earth_planet_geometry = new THREE.SphereGeometry(1,32,16)
 const earth_planet_material = new THREE.MeshBasicMaterial({map: earth_planet_texture})
 const earth_planet = new THREE.Mesh(earth_planet_geometry,earth_planet_material)
 earth_group.add(earth_planet)
+earth_group.add(moon_planet)
 
 //translate parameters
 debug_object.traslateValue = true;
@@ -143,6 +153,7 @@ const orbita = (trigger, debug, valueKey, incrementKey) => {
         debug[valueKey] = 0
     }
 }
+moon_planet.position.x = 5
 
 //loop
 const tick = () =>{
@@ -153,10 +164,11 @@ const tick = () =>{
 
     //translation method
     orbita(debug_object.traslateValue,debug_object,'earth_value','earth_increment')
+    orbita(debug_object.traslateValue,debug_object,'moon_value','moon_increment')
 
     //earth_parameters_translation
-    earth_planet.position.x = Math.cos(debug_object.earth_value) * debug_object.earth_distance
-    earth_planet.position.z = Math.sin(debug_object.earth_value) * debug_object.earth_distance
+    earth_group.position.x = Math.cos(debug_object.earth_value) * debug_object.earth_distance
+    earth_group.position.z = Math.sin(debug_object.earth_value) * debug_object.earth_distance
 
     orbitControls.update(); //update orbit controls
     renderer.render(scene,camera); //render
