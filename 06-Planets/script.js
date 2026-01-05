@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js'
+import GUI from 'lil-gui' //debug menu
 const canvas = document.querySelector('canvas.webgl'); //canvas
 const axesHelper = new THREE.AxesHelper(2); //axes Helper
 //printer
@@ -16,12 +17,22 @@ let sizes = {
 //scene
 const scene = new THREE.Scene();
 
+//debug GUI
+const gui = new GUI({
+    title: 'Controls',
+    width: 340
+})
+const debug_object = {}
+
 /*Groups Geometries*/
 //planet
 const planet = new THREE.Mesh(
     new THREE.SphereGeometry(1,32,16),
     new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: true})
 );
+
+//translate parameters
+debug_object.traslateValue = true;
 
 //camera
 const camera = new THREE.PerspectiveCamera(75,sizes.width/sizes.height,0.01,200);
