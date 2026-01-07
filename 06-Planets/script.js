@@ -142,7 +142,7 @@ Traslation method
     -rotation with the new method
     planet.position.x = Math.cos(debug_object.traslatePosition) * 3
     planet.position.z = Math.sin(debug_object.traslatePosition) * 3
-
+    .
 */
 
 //translation method
