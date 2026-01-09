@@ -31,28 +31,42 @@ const sizes ={
  * image.src = '/textures/door/color.jpg'
  */
 
-//import texture with Threejs
-const textureLoader = new THREE.TextureLoader()
-const texture_box = textureLoader.load(
-    '/textures/door/color.jpg',
-    () =>{
-        console.log('load')
-    },
-    () =>{
-        console.log('progress')
-    },
-    () =>{
-        console.log('error')
-    }
-)
-texture_box.colorSpace = THREE.SRGBColorSpace
+//import texture with Threejs and loading manager
+const lodingManager = new THREE.LoadingManager()
+
+lodingManager.onStart = () =>{
+    console.log('onStart')
+}
+
+lodingManager.onLoad = () =>{
+    console.log('onLoad')
+}
+
+lodingManager.onProgress = () =>{
+    console.log('onProgress')
+}
+
+lodingManager.onError = () =>{
+    console.log('onError')
+}
+
+//import texture with Threejs and loading manager
+const textureLoader = new THREE.TextureLoader(lodingManager)
+const colorTexture = textureLoader.load('/textures/door/color.jpg')
+colorTexture.colorSpace = THREE.SRGBColorSpace
+
+const alphaTexture = textureLoader.load('/textures/door/alpha.jpg')
+alphaTexture.colorSpace = THREE.SRGBColorSpace
+
+const heightTexture = textureLoader.load('/textures/door/height.jpg')
+heightTexture.colorSpace = THREE.SRGBColorSpace
 
 //object axes helper
 const axesHelper = new THREE.AxesHelper(2)
 
 //object 01 box
 const box_geometry = new THREE.BoxGeometry(1,1,1)
-const box_material = new THREE.MeshBasicMaterial({map: texture_box})
+const box_material = new THREE.MeshBasicMaterial({map: colorTexture})
 const Box_object = new THREE.Mesh(box_geometry,box_material)
 
 //Debug Grafic User Interface (GUI)
