@@ -4,6 +4,7 @@ import { OrbitControls } from 'three/examples/jsm/Addons.js'
 
 //canvas
 const canvas = document.querySelector('canvas.webgl')
+
 //bound sizes
 const sizes ={
     width: window.innerWidth,
@@ -27,11 +28,13 @@ const gui = new GUI({
     width: 300,
 })
 
+//object gui
+const object_gui = {}
+
 //box gui
 const box_gui = gui.addFolder('Box Item')
 box_gui
     .add(Box_object,'visible')
-
 
 //camera
 const camera = new THREE.PerspectiveCamera(75,sizes.width/sizes.height,0.1,200)
@@ -74,7 +77,7 @@ let time = Date.now()
 
 //loop
 const loop = () =>{
-    
+
     //timer control fps
     const currentTime = Date.now()
     const deltaTime = currentTime - time
