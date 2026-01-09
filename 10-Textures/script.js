@@ -2,6 +2,12 @@ import * as THREE from 'three'
 import GUI from 'lil-gui'
 import { OrbitControls } from 'three/examples/jsm/Addons.js'  
 
+/**
+ * import a image width import
+ * import imageSource from './textures/door/color.jpg'
+ * console.log(imageSource)
+ */
+
 //canvas
 const canvas = document.querySelector('canvas.webgl')
 
@@ -11,15 +17,42 @@ const sizes ={
     height: window.innerHeight
 }
 
-//textures
+/**
+ * --import image with native js
+ * const image = new Image()
+ * 
+ * const texture_box = new THREE.Texture(image)
+ * texture_box.colorSpace = THREE.SRGBColorSpace
+ * 
+ * image.onload = () =>{
+ *     texture_box.needsUpdate = true
+ *     console.log('image loaded')
+ * }
+ * image.src = '/textures/door/color.jpg'
+ */
+
+//import texture with Threejs
 const textureLoader = new THREE.TextureLoader()
+const texture_box = textureLoader.load(
+    '/textures/door/color.jpg',
+    () =>{
+        console.log('load')
+    },
+    () =>{
+        console.log('progress')
+    },
+    () =>{
+        console.log('error')
+    }
+)
+texture_box.colorSpace = THREE.SRGBColorSpace
 
 //object axes helper
 const axesHelper = new THREE.AxesHelper(2)
 
 //object 01 box
 const box_geometry = new THREE.BoxGeometry(1,1,1)
-const box_material = new THREE.MeshBasicMaterial({color: 0x00ff00})
+const box_material = new THREE.MeshBasicMaterial({map: texture_box})
 const Box_object = new THREE.Mesh(box_geometry,box_material)
 
 //Debug Grafic User Interface (GUI)
@@ -38,7 +71,7 @@ box_gui
 
 //camera
 const camera = new THREE.PerspectiveCamera(75,sizes.width/sizes.height,0.1,200)
-camera.position.z = 5
+camera.position.z = 2
 
 //camera rezises
 window.addEventListener('resize', () =>
