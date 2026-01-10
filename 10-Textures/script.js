@@ -69,6 +69,7 @@ const box_geometry = new THREE.BoxGeometry(1,1,1)
 const box_material = new THREE.MeshBasicMaterial({map: colorTexture})
 const Box_object = new THREE.Mesh(box_geometry,box_material)
 
+console.log(box_geometry.attributes.uv)
 //Debug Grafic User Interface (GUI)
 const gui = new GUI({
     title: 'Debug User Interface',
