@@ -61,6 +61,20 @@ alphaTexture.colorSpace = THREE.SRGBColorSpace
 const heightTexture = textureLoader.load('/textures/door/height.jpg')
 heightTexture.colorSpace = THREE.SRGBColorSpace
 
+//texture transform
+//colorTexture.repeat.x = 2
+//colorTexture.repeat.y = 3
+
+//colorTexture.wrapS = THREE.MirroredRepeatWrapping
+//colorTexture.wrapT = THREE.MirroredRepeatWrapping
+
+//colorTexture.offset.x = 0.5
+//colorTexture.offset.y = 0.5
+
+colorTexture.rotation = Math.PI / 4
+colorTexture.center.x = 0.5
+colorTexture.center.y = 0.5
+
 //object axes helper
 const axesHelper = new THREE.AxesHelper(2)
 
@@ -68,8 +82,8 @@ const axesHelper = new THREE.AxesHelper(2)
 const box_geometry = new THREE.BoxGeometry(1,1,1)
 const box_material = new THREE.MeshBasicMaterial({map: colorTexture})
 const Box_object = new THREE.Mesh(box_geometry,box_material)
+//console.log(box_geometry.attributes.uv)
 
-console.log(box_geometry.attributes.uv)
 //Debug Grafic User Interface (GUI)
 const gui = new GUI({
     title: 'Debug User Interface',
